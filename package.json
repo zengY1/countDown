@@ -2,6 +2,7 @@
 	"name": "countdown",
 	"displayName": "countDown",
 	"description": "倒计时",
+	"publisher": "zeng",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.60.0"
