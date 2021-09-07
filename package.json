@@ -1,0 +1,61 @@
+{
+	"name": "countdown",
+	"displayName": "countDown",
+	"description": "倒计时",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": [
+			{
+				"title": "提醒小工具",
+				"properties": {
+					"countDown.defalutTime": {
+						"type": "string",
+						"default": "18:00",
+						"description": "默认的常用时间。"
+					},
+					"countDown.specialTime": {
+						"type": "string",
+						"default": "9:31",
+						"description": "特殊的时间，配合specialDay使用，格式与defalutTime一致。"
+					},
+					"countDown.specialDay": {
+						"type": "string",
+						"default": "[1,2,4]",
+						"description": "星期几。格式类型：[number]"
+					},
+					"countDown.activeTitle": {
+						"type": "string",
+						"default": "下班",
+						"description": "达成目标的标题"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.60.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	}
+}
